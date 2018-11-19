@@ -1,0 +1,8 @@
+@media (min-width: 993px) {
+  .nav-collapsed .brand-sidebar .navbar-toggler,
+  .nav-collapsed .brand-sidebar .brand-logo span {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 0.05s linear;
+  }
+}
