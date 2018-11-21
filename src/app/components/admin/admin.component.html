@@ -1,3 +1,41 @@
-<p>
-  admin works!
-</p>
+<!-- START HEADER -->
+<app-header></app-header>
+<!-- END HEADER -->
+<!-- START MAIN -->
+<div id="main" class="main-full">
+    <!-- START WRAPPER -->
+    <div class="wrapper">
+    <!-- START LEFT SIDEBAR NAV-->
+    <app-sidenav></app-sidenav>
+    <!-- END LEFT SIDEBAR NAV-->
+    <!-- START CONTENT -->
+    <section id="content">
+      <!--breadcrumbs start-->
+      <app-breadcrumbs></app-breadcrumbs>
+      <!--breadcrumbs end-->
+      <!--start container-->
+      <div class="container">
+        <div class="section">
+          <p>Text or Title</p>
+          <div class="divider"></div>
+        </div>
+
+
+          
+        <router-outlet></router-outlet>
+
+
+        <!-- Floating Action Button -->
+        <app-floating-button></app-floating-button>
+        <!-- Floating Action Button -->
+      </div>
+      <!--end container-->
+    </section>
+    <!-- END CONTENT -->
+  </div>
+  <!-- END WRAPPER -->
+</div>
+<!-- END MAIN -->
+<!-- START FOOTER -->
+<app-footer></app-footer>
+<!-- END FOOTER -->
