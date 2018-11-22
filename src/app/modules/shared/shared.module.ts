@@ -5,13 +5,13 @@ import { HeaderComponent } from 'src/app/components/shared/header/header.compone
 import { SidenavComponent } from 'src/app/components/shared/sidenav/sidenav.component';
 import { BreadcrumbsComponent } from 'src/app/components/shared/breadcrumbs/breadcrumbs.component';
 import { FloatingButtonComponent } from 'src/app/components/shared/floating-button/floating-button.component';
-import { TabsNavComponent } from 'src/app/components/shared/tabs-nav/tabs-nav.component';
+import { TabnavComponent } from 'src/app/components/shared/tabnav/tabnav.component';
 import { FooterComponent } from 'src/app/components/shared/footer/footer.component';
 
 const Components = [
   HeaderComponent,
   SidenavComponent,
-  TabsNavComponent,
+  TabnavComponent,
   BreadcrumbsComponent,
   FloatingButtonComponent,
   FooterComponent
