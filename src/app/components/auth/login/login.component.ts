@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators, NgForm } from '@angular/forms';
 import { UserService } from '../../../services/user.service';
 import { UserLogin } from '../../../models/login.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,7 @@ export class LoginComponent implements OnInit {
   form: any = FormGroup;
 
   constructor(
+    public _router: Router,
     public _userService: UserService
   ) { }
 
@@ -31,12 +33,11 @@ export class LoginComponent implements OnInit {
       this.form.value.UserName,
       this.form.value.Password,
       this.form.value.RememberMe
-      );
+    );
 
     this._userService.login(userLogin)
-      .subscribe(resp => {
-        console.log(resp);
-      });
+      .subscribe(ConnectedUser => this._router.navigate(['/dashboard'])
+    );
   }
 
 }
