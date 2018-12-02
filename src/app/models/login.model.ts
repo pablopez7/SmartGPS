@@ -1,4 +1,4 @@
-export class LoginData {
+export class UserLogin {
   constructor(
     public UserName: string,
     public Password: string,
@@ -8,7 +8,7 @@ export class LoginData {
 
 export class ResetPasswordData {
     constructor(
-        public UserName: string,
-        public Password: string
+        public username: string,
+        public password: string
     ) { }
 }
