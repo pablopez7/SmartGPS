@@ -5,18 +5,39 @@ import { UserLogin } from '../models/login.model';
 import { urlAPI } from '../config/config';
 
 import { map } from 'rxjs/operators';
+import { Token } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor(public _http: HttpClient) { }
+  _userLogin: UserLogin;
+  usuario: string;
+  token: string;
 
-  login(userLogin: UserLogin) {
+  constructor(public _http: HttpClient) {
+    this.loadStorage();
+  }
+
+  connectedUser() {
+    return ( this.token.length > 5 ) ? true : false;
+  }
+
+  loadStorage() {
+    if ( localStorage.getItem('token')) {
+      this.token = localStorage.getItem('token');
+      this.usuario = JSON.parse( localStorage.getItem('usuario') );
+    } else {
+      this.token = "";
+      this.usuario = null;
+    }
+  }
+
+  login(_userLogin: UserLogin) {
     let url = urlAPI + '/Login';
 
-    return this._http.post(url, userLogin)
+    return this._http.post(url, _userLogin)
       .pipe(map((resp: any) => {
         localStorage.setItem('token', resp.token);
         localStorage.setItem('usuario', JSON.stringify(resp.usuario));

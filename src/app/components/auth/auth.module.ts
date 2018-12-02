@@ -13,7 +13,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
 import { UserService } from 'src/app/services/user.service';
 
-
+import { LoginGuard } from 'src/app/services/guards/login.guard';
 
 const Components = [
   AuthComponent,
@@ -33,7 +33,10 @@ const Components = [
     ReactiveFormsModule,
     HttpClientModule
   ],
-  providers: [UserService]
+  providers: [
+    UserService,
+    LoginGuard
+  ]
 })
 
 export class AuthModule { }
