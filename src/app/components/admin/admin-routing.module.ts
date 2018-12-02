@@ -14,7 +14,8 @@ const adminRoutes: Routes = [
     canActivate: [ LoginGuard ],
     children: [
       { path: 'dashboard', component: DashboardComponent },
-      { path: 'users', component: UsersComponent }
+      { path: 'users', component: UsersComponent },
+      { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     ]
   }
 ];

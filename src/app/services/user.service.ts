@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 
 import { UserLogin } from '../models/login.model';
 import { urlAPI } from '../config/config';
 
 import { map } from 'rxjs/operators';
-import { Token } from '@angular/compiler';
 
 @Injectable({
   providedIn: 'root'
@@ -16,7 +16,10 @@ export class UserService {
   usuario: string;
   token: string;
 
-  constructor(public _http: HttpClient) {
+  constructor(
+    public _router: Router,
+    public _http: HttpClient
+    ) {
     this.loadStorage();
   }
 
@@ -45,5 +48,15 @@ export class UserService {
         return true;
       }
       ));
+  }
+
+  logout() {
+    this.token = '';
+    this.usuario = null;
+
+    localStorage.removeItem('token');
+    localStorage.removeItem('usuario');
+    
+    this._router.navigate(['/login']);
   }
 }
