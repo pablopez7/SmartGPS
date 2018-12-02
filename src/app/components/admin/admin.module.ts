@@ -5,10 +5,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AdminRoutingModule } from './admin-routing.module';
 import { SharedModule } from '../shared/shared.module';
 
-import { AdminComponent } from 'src/app/components/admin/admin.component';
-import { DashboardComponent } from 'src/app/components/admin/dashboard/dashboard.component';
-import { UsersComponent } from 'src/app/components/admin/users/users.component';
-
+import { AdminComponent } from './admin.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UsersComponent } from './users/users.component';
 
 const Components = [
   AdminComponent,
