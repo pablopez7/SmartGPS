@@ -5,6 +5,8 @@
   Author URL: https://themeforest.net/user/pixinvent/portfolio
 ================================================================================*/
 
+function init_plugins() {
+
   /*Preloader*/
   $(window).on('load', function() {
     setTimeout(function() {
@@ -293,3 +295,5 @@
       })
     }
   });
+
+}
