@@ -19,6 +19,13 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    
+    /* if (this._userService.token) {
+      this._router.navigate(['/dashboard']);
+    } else {
+      this._router.onSameUrlNavigation;
+    } */
+
     this.form = new FormGroup({
       UserName: new FormControl(null, Validators.required),
       Password: new FormControl(null, Validators.required),
@@ -28,6 +35,18 @@ export class LoginComponent implements OnInit {
   }
 
   onLogin() {
+
+
+    if (this._userService.token) {
+
+      
+      this._router.navigate(['/dashboard']);
+      location.reload();
+    } else {
+      this._router.onSameUrlNavigation;
+    }
+
+
     let userLogin = new UserLogin(
       this.form.value.UserName,
       this.form.value.Password,
@@ -35,7 +54,9 @@ export class LoginComponent implements OnInit {
     );
 
     this._userService.login(userLogin)
-      .subscribe(ConnectedUser => this._router.navigate(['/dashboard'])
+      .subscribe(ConnectedUser => {
+        this._router.navigate(['/dashboard']);
+      }
     );
   }
 
