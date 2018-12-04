@@ -1,4 +1,9 @@
+.pointer {
+  cursor: pointer;
+}
+
 @media (min-width: 993px) {
+
   .nav-collapsed .brand-sidebar .navbar-toggler,
   .nav-collapsed .brand-sidebar .brand-logo span {
     visibility: hidden;

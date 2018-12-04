@@ -20,7 +20,7 @@ function init_plugins() {
 
     var window_width = $(window).width();
     var openIndex;
-
+    
     // Collapsible navigation menu
     $('.nav-collapsible .navbar-toggler').click(function() {
       //set Index velue
