@@ -1,14 +1,17 @@
-
 .footer-fixed {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    padding: 0 !important
-  }
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.no-padding {
+  padding: 0 !important;
+}
 
 .menu-tabs {
   display: flex;
   text-align: center;
+  padding: 1%;
 }
 
 .menu-tab {
@@ -31,7 +34,6 @@
   display: block;
   margin-top: 5px;
   margin-bottom: 4px;
-  font-size: 24px;
   color: white;
 }
 
@@ -41,25 +43,25 @@
 }
 
 .menu-tab:hover {
-   transform: scale3d(1.2, 1.2, 1.2);
-}    
- 
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+
 .menu-tab:hover i {
-    color: #039be5;
- }
+  color: #039be5;
+}
 
 .menu-tab:hover span {
-    color: #039be5;
+  color: #039be5;
 }
 
 .menu-tab a:focus {
-    border-bottom: 2px solid white;
+  border-bottom: 2px solid white;
 }
 
 .menu-tab:focus i {
-    color: #039be5;
- }
+  color: #039be5;
+}
 
 .menu-tab:focus span {
-    color: #039be5;
+  color: #039be5;
 }
