@@ -32,7 +32,7 @@ export class UserService {
       this.token = localStorage.getItem('token');
       this.usuario = JSON.parse( localStorage.getItem('usuario') );
     } else {
-      this.token = "";
+      this.token = '';
       this.usuario = null;
     }
   }
@@ -51,6 +51,7 @@ export class UserService {
   }
 
   logout() {
+    location.reload();
     this.token = '';
     this.usuario = null;
 

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+declare function init_plugins();
+
 @Component({
   selector: 'app-auth',
   templateUrl: './auth.component.html',
@@ -9,6 +11,8 @@ export class AuthComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() {
+    init_plugins();
+  }
 
 }
