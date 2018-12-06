@@ -18,7 +18,8 @@ const adminRoutes: Routes = [
       { path: 'dashboard', component: DashboardComponent },
       { path: 'users', component: UsersComponent },
       { path: 'clients', component: ClientsComponent },
-      { path: 'vehicles', component: VehiclesComponent }
+      { path: 'vehicles', component: VehiclesComponent },
+      { path: '', redirectTo: '/dashboard' , pathMatch: 'full' }
     ]
   }
 ];
