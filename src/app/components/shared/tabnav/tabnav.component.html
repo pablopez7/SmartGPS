@@ -1,40 +1,42 @@
 <div class="row">
-  <div id="test1" class="col s12">Tab 1</div>
-  <div id="test3" class="col s12">Tab 3</div>
-  <div id="test4" class="col s12">Tab 4</div>
-  <div id="test5" class="col s12">Tab 5</div>
-  <div id="test6" class="col s12">Tab 6</div>
-
-  <div class="col s12 no-pd footer-fixed hide-on-med-and-up">
-    <ul class="tabs tabs-icon blue-grey darken-3">
-      <li class="tab col s2">
-        <a class="white-text waves-effect waves-light active" href="#test1">
-          <i class="material-icons">home</i><span class="tab-text">home</span></a>
-      </li>
-      <li class="tab col s3">
-        <a class="white-text waves-effect waves-light active" href="#test3">
-          <i class="material-icons">account_box</i>
-          <span class="tab-text">user</span>
-        </a>
-      </li>
-      <li class="tab col s3">
-        <a class="white-text waves-effect waves-light active" href="#test4">
-          <i class="material-icons">search</i>
-          <span class="tab-text">search</span>
-        </a>
-      </li>
-      <li class="tab col s3">
-        <a class="white-text waves-effect waves-light active" href="#test5">
-          <i class="material-icons">mail_outline</i>
-          <span class="tab-text">Mailbox</span>
-        </a>
-      </li>
-      <li class="tab col s3">
-        <a class="white-text waves-effect waves-light active" href="#test6">
-          <i class="material-icons">menu</i>
-          <span class="tab-text">menu</span>
-        </a>
-      </li>
-    </ul>
+  <div class="col s12 blue-grey darken-3 no-padding footer-fixed hide-on-med-and-up">
+      <ul class="menu-tabs center-align">
+         
+          <li class="col s2 menu-tab no-padding">
+              <a class="waves-light" routerLinkActive="active" routerLink="/dashboard">
+                  <i class="material-icons menu-tab-icon">home</i>
+                  <span class="menu-tab-text">home</span>
+              </a>
+          </li>
+         
+          <li class="col s3 menu-tab no-padding">
+              <a class="waves-light"  routerLinkActive="active" routerLink="/users">
+                  <i class="material-icons menu-tab-icon">account_box</i>
+                  <span class="menu-tab-text">user</span>
+              </a>
+          </li>
+         
+          <li class="col s2 menu-tab no-padding">
+              <a class="waves-light" routerLinkActive="active" routerLink="/clients">
+                  <i class="material-icons menu-tab-icon">search</i>
+                  <span class="menu-tab-text">search</span>
+              </a>
+          </li>
+         
+          <li class="col s3 menu-tab no-padding">
+              <a class="waves-light" routerLinkActive="active" routerLink="/vehicles">
+                  <i class="material-icons menu-tab-icon">mail_outline</i>
+                  <span class="menu-tab-text">Mailbox</span>
+              </a>
+          </li>
+         
+          <li class="col s2 menu-tab no-padding">
+              <a class="waves-light" routerLinkActive="active" routerLink="/dashboard">
+                  <i class="material-icons menu-tab-icon">menu</i>
+                  <span class="menu-tab-text">menu</span>
+              </a>
+          </li>
+          
+      </ul>
   </div>
 </div>

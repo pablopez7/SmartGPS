@@ -1,31 +1,48 @@
-.footer-fixed {
+  .footer-fixed {
     position: fixed;
     bottom: 0;
     width: 100%;
   }
 
-  .tabs-icon {
-    font-size: 10px;
-    overflow: hidden;
+  .no-padding {
+    padding: 0 !important;
   }
 
-  .tabs-icon i {
+  .menu-tabs {
+    margin: auto !important;
+  }
+
+  .menu-tab {
+    min-width: 50px !important;
+  }
+
+  .menu-tab a {
+    text-decoration: none;
     display: block;
-    margin-top: 5px;
-    margin-bottom: -15px;
-    font-size: 24px;
     color: white;
   }
 
-  /* OVERWRITE MATERIAL CSS MIN WIDTH FOR MOBILE */
-  .tabs .tab {
-    min-width: 50px !important
+  .menu-tab-icon {
+    display: block;
+    margin-top: 4px;
+    margin-bottom: -2px;
   }
 
-  .no-pd {
-    padding: 0 !important
+  .menu-tab-text {
+    font-size: 10px;
+    text-transform: uppercase;
+    margin-bottom: -8px;
   }
-  
-  .tab-text {
-      font-size: 10px;
+
+  .active {
+    border-bottom: 5px solid #039be5;
+    color: blue;
+  }
+
+
+  @media (min-width: 590px) {
+    .menu-tab a:hover {
+      background-color: #000;
+      border-bottom: 5px solid #000;
+    }
   }
