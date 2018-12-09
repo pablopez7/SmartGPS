@@ -10,7 +10,6 @@ import { TabnavComponent } from './tabnav/tabnav.component';
 import { BreadcrumbsComponent } from './breadcrumbs/breadcrumbs.component';
 import { FloatingButtonComponent } from './floating-button/floating-button.component';
 import { FooterComponent } from './footer/footer.component';
-import { TabComponent } from './tab/tab.component';
 
 const Components = [
   HeaderComponent,
@@ -18,8 +17,7 @@ const Components = [
   TabnavComponent,
   BreadcrumbsComponent,
   FloatingButtonComponent,
-  FooterComponent,
-  TabComponent
+  FooterComponent
 ]
 
 @NgModule({

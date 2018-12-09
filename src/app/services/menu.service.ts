@@ -14,6 +14,16 @@ export class MenuService {
       titulo: 'Usuarios',
       icono: 'person',
       url: '/users'
+    },
+    {
+      titulo: 'Clientes',
+      icono: 'person_pin_circle',
+      url: '/clients'
+    },
+    {
+      titulo: 'Unidades',
+      icono: 'airport_shuttle',
+      url: '/vehicles'
     }
   ];
 
